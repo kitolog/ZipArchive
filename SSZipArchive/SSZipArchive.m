@@ -673,7 +673,7 @@ BOOL _fileIsSymbolicLink(const unz_file_info *fileInfo);
     BOOL success = [zipArchive openWithSplitSize:diskSize];
     if (success) {
         for (NSString *filePath in paths) {
-            success &= [zipArchive writeFile:filePath withPassword:password];
+            success &= [zipArchive writeFile:filePath withPassword:nil];
         }
         success &= [zipArchive close];
     }
